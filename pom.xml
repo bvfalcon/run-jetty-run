@@ -6,12 +6,12 @@
   <version>1.3.5-SNAPSHOT</version>
   <packaging>pom</packaging>
   <properties>
-    <tycho>0.24.0</tycho>
-    <eclipse>http://download.eclipse.org/releases/mars/</eclipse>
+    <tycho>1.7.0</tycho>
+    <eclipse>http://download.eclipse.org/releases/2020-09/</eclipse>
   </properties>
   <repositories>
     <repository>
-        <id>mars</id>
+        <id>eclipse-repo</id>
         <layout>p2</layout>
         <url>${eclipse}</url>
     </repository>
@@ -24,15 +24,30 @@
     <module>Jetty93Support</module>
     <module>Jetty94Support</module>
     <module>Jetty948Support</module>
+    <module>Jetty9435Support</module>
   </modules>
   <build>
     <plugins>
-        <plugin>
-          <groupId>org.eclipse.tycho</groupId>
-          <artifactId>tycho-maven-plugin</artifactId>
-          <version>${tycho}</version>
-          <extensions>true</extensions>
-        </plugin>
+      <plugin>
+        <groupId>org.eclipse.tycho</groupId>
+        <artifactId>tycho-maven-plugin</artifactId>
+        <version>${tycho}</version>
+        <extensions>true</extensions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-gpg-plugin</artifactId>
+        <version>1.6</version>
+        <executions>
+          <execution>
+            <id>sign-artifacts</id>
+            <phase></phase>
+            <goals>
+              <goal>sign</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
     </plugins>
   </build>
 </project>
