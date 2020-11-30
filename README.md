@@ -15,17 +15,17 @@ New feature and bug fix will be performed here.
 
 ## Install
 
-[update site list](http://xzer.github.io/run-jetty-run/).
+[update site list](http://bvfalcon.github.io/run-jetty-run/).
 
 ***Due to the Java 8 lambda issue, the nightly build is recommended.***
 
-## About Java 9
+## About Java 11
 
-The official Java 9 support of Jetty is start from version 10 which has not been released yet, but Jetty has released a version 9.4.8 with earlier Java 9 support, which has been supported by RJR too. 
+Jetty supports Java 11 from version 9.4.13. 
 
 ***IMPORTANT***
 
-To use RJR with jetty 9.4.8 Java 9 support, you need add the following vm args to your launch configuration or you will get error as "java.lang.NoClassDefFoundError: javax/xml/bind/JAXBException":
+To use RJR with jetty 9.4.8 (and later) Java 9 support, you need add the following vm args to your launch configuration or you will get error as "java.lang.NoClassDefFoundError: javax/xml/bind/JAXBException":
 
 ```
 --add-modules java.xml.bind
@@ -40,6 +40,7 @@ The current 1.3.5 nightly build can be automatically updated.
 ## News
 
 - Version 1.3.5 is under developing.
+    - 2020/11/30 Jetty 9.4.35 support is added (for earlier Java 11 support)
     - 2018/02/10 Jetty 9.4.8 support is added (for earlier Java 9 support)
     - 2017/08/01 Jetty 9.4.6 support is added
 - 2016/01/16 RJR is officially migrated to github now.
@@ -82,6 +83,7 @@ We think there are some benefits to use Run-Jetty-Run instead of WTP:
 - Xzer
 - ffoysal
 - Chao Chang
+- Vladimir Bychkov
 
 ## LICENSE
 
