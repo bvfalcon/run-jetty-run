@@ -1,12 +1,5 @@
 # Run Jetty Run
 
-```
-This repository has been decided to be the official successor of the original "Run Jetty Run" at
-https://code.google.com/p/run-jetty-run/.
-
-New feature and bug fix will be performed here.
-```
-
 - Run web applications with Jetty and Eclipse in one click!
 
 - Full maven support , simply run maven J2EE project without any config.
